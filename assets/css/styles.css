@@ -262,7 +262,6 @@ section {
 	width: calc(var(--vh) * 10.8);
 	height: calc(var(--vh) * 10.8);
 	padding: calc(var(--vh) * 3.24);
-	border: solid 3px var(--gold);
 	border-radius: 50%;
 	display: flex;
 	flex-direction: column;
@@ -552,4 +551,26 @@ a.active {
 	100% {
 		color: #ffffff;
 	}
+}
+
+.reloj-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.tiempo-bloque {
+    text-align: center;
+}
+
+.tiempo-bloque span {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.tiempo-bloque small {
+    text-transform: uppercase;
+    font-size: 0.8rem;
 }
