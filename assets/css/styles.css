@@ -43,7 +43,9 @@ body {
 		font-size: 1vw;
 	}
 }
-
+.persona{
+	font-size: 5vw;
+}
 .imgPortada {
 	height: 100vh;
 	height: calc(var(--vh) * 108);
@@ -573,4 +575,40 @@ a.active {
 .tiempo-bloque small {
     text-transform: uppercase;
     font-size: 0.8rem;
+}
+
+.flip-card {
+    background-color: transparent;
+    height: 200px; /* Ajusta la altura según necesites */
+    perspective: 1000px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+/* Esta clase se activa con el clic */
+.flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.flip-card-back {
+    transform: rotateY(180deg);
 }

@@ -129,8 +129,14 @@
 							Gracias por ser parte de mi historia y compartir contigo este dia tan especial
 						</p>
 						<div class="espacio_btn">
-							<a target="_blank" href="https://maps.app.goo.gl/geWpYpV617emMza5A?g_st=aw" class="btn">cómo
-								llegar</a>
+							<a target="_blank" href="https://maps.app.goo.gl/geWpYpV617emMza5A?g_st=aw" class="btn">
+								Inicio del desfile
+							</a>
+						</div>
+						<div class="espacio_btn">
+							<a target="_blank" href="https://maps.app.goo.gl/geWpYpV617emMza5A?g_st=aw" class="btn">
+								Fin del desfile
+							</a>
 						</div>
 					</section>
 					<section id="2" class="section_clock">
@@ -212,15 +218,47 @@
 					</section>
 					<section id="5">
 						<div class="line"></div>
-						<header>¿Qué canciones no pueden faltar?</header>
+						<header>Presentes y Regalos</header>
 						<p>
-							¡Ayudame sugiriendo las canciones que pensás que no pueden
-							faltar en la fiesta!
+							Tu presencia es nuestro mejor regalo, pero si deseás tener un detalle con nosotros, podés
+							hacerlo de las siguientes formas:
 						</p>
-						<div class="espacio_btn">
-							<a target="_blank"
-								href="https://docs.google.com/forms/d/e/1FAIpQLSeM0KBnVegaXkv2ihc1eULrEnPTovaDA69geDt26urtilnQtA/viewform?usp=sf_link"
-								class="btn">Sugerir canción</a>
+
+						<div
+							style="display: flex; justify-content: space-around; flex-wrap: wrap; gap: 20px; margin-top: 20px; text-align: center;">
+
+							<div
+								style="flex: 1; min-width: 250px; padding: 20px; border: 1px solid #eee; border-radius: 10px; background-color: rgba(255,255,255,0.05);">
+								<div style="font-size: 24px; margin-bottom: 10px;">🎁</div>
+								<h3 style="margin-bottom: 10px;" class="persona">En persona</h3>
+								<p>Podés entregarlo el día del evento en el sobre que prefieras.</p>
+							</div>
+
+							<div class="flip-card" onclick="this.classList.toggle('flipped')"
+								style="flex: 1; min-width: 250px; cursor: pointer;">
+								<div class="flip-card-inner">
+
+									<div class="flip-card-front"
+										style="padding: 20px; border: 1px solid #eee; border-radius: 10px; background-color: rgba(255,255,255,0.05);">
+										<div style="font-size: 24px; margin-bottom: 10px;">💳</div>
+										<h3 style="margin-bottom: 10px;" class="persona">Transferencia</h3>
+										<p style="margin: 5px 0;"><strong>Córdobas:</strong> 136095542</p>
+										<p style="margin: 5px 0;"><strong>Dólares:</strong> 232272324</p>
+										<small style="opacity: 0.6;">(Toca para ver QR)</small>
+									</div>
+
+									<div class="flip-card-back"
+										style="padding: 20px; border: 1px solid #eee; border-radius: 10px; background-color: #ffffff; color: #333; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+										<h4 style="margin-bottom: 10px;" class="persona">Escanear QR</h4>
+										<img src="https://storage2.me-qr.com/qr/304825277.png?v=1769982813"
+											alt="QR Transferencia"
+											style="width: 140px; height: 140px; object-fit: contain;">
+										<small style="margin-top: 10px; color: #888;">Toca para volver</small>
+									</div>
+
+								</div>
+							</div>
+
 						</div>
 					</section>
 				</div>
@@ -232,7 +270,10 @@
 					<li><a class="nav_a" href="#3">3</a></li>
 					<li><a class="nav_a" href="#4">4</a></li>
 					<li><a class="nav_a" href="#5">5</a></li>
+					<li><a class="nav_a" href="#6">6</a></li>
+
 				</ul>
+
 			</nav>
 		</div>
 		<div class="myLink">
@@ -249,31 +290,31 @@
 	<script type="text/javascript" src="assets/js/scripts.js"></script>
 	<script type="text/javascript" src="assets/js/jquery.fancybox.min.js"></script>
 	<script>
-    const fechaObjetivo = new Date("Feb 15, 2026 00:00:00").getTime();
+		const fechaObjetivo = new Date("Feb 15, 2026 00:00:00").getTime();
 
-    const intervalo = setInterval(function() {
-        const ahora = new Date().getTime();
-        const distancia = fechaObjetivo - ahora;
+		const intervalo = setInterval(function () {
+			const ahora = new Date().getTime();
+			const distancia = fechaObjetivo - ahora;
 
-        // Cálculos de tiempo
-        const dias = Math.floor(distancia / (1000 * 60 * 60 * 24));
-        const horas = Math.floor((distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutos = Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));
-        const segundos = Math.floor((distancia % (1000 * 60)) / 1000);
+			// Cálculos de tiempo
+			const dias = Math.floor(distancia / (1000 * 60 * 60 * 24));
+			const horas = Math.floor((distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+			const minutos = Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));
+			const segundos = Math.floor((distancia % (1000 * 60)) / 1000);
 
-        // Inyectar en el HTML
-        document.getElementById("dias").innerText = dias;
-        document.getElementById("horas").innerText = horas;
-        document.getElementById("minutos").innerText = minutos;
-        document.getElementById("segundos").innerText = segundos;
+			// Inyectar en el HTML
+			document.getElementById("dias").innerText = dias;
+			document.getElementById("horas").innerText = horas;
+			document.getElementById("minutos").innerText = minutos;
+			document.getElementById("segundos").innerText = segundos;
 
-        // Si la cuenta termina
-        if (distancia < 0) {
-            clearInterval(intervalo);
-            document.getElementById("cuenta-regresiva").innerHTML = "<h3>¡Llegó el día!</h3>";
-        }
-    }, 1000);
-</script>
+			// Si la cuenta termina
+			if (distancia < 0) {
+				clearInterval(intervalo);
+				document.getElementById("cuenta-regresiva").innerHTML = "<h3>¡Llegó el día!</h3>";
+			}
+		}, 1000);
+	</script>
 </body>
 
 </html>
