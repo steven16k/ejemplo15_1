@@ -579,3 +579,36 @@ a.active {
 
 
 
+/* Tu código base con una pequeña corrección en border-color */
+.typewriter-text {
+    font-family: 'Parisienne', cursive;
+    font-size: 4rem;
+    color: #f4edd3 !important; /* Forzamos el color inicial */
+    text-align: center;
+    margin: 0 auto;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    border-right: 3px solid #bab9b7;
+    transition: color 0.5s ease-in-out !important;
+}
+
+/* Clase de cambio */
+.typewriter-text.nombre-dorado {
+    color: #e1b100 !important;
+    border-right-color: #e1b100 !important;
+}
+
+.start-typing {
+    animation: typing-name 2s steps(8) forwards, blink-cursor 0.7s step-end infinite;
+}
+
+@keyframes typing-name {
+    from { width: 0; }
+    to { width: 8ch; }
+}
+
+@keyframes blink-cursor {
+    from, to { border-color: transparent; }
+    50% { border-color: inherit; }
+}

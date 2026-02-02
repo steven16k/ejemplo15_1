@@ -62,18 +62,18 @@ function confetti() {
 		for (var i = 0; i <= confetticount; i++) {
 			$(this).append(
 				'<span class="particle c' +
-					$.rnd(1, 2, 0) +
-					'" style="top:' +
-					$.rnd(10, 40, 0) +
-					"%; left:" +
-					$.rnd(0, 100, 0) +
-					"%;width: calc(" +
-					$.rnd(0.025, 0.875, 3) +
-					"vw + 8px) ; height: calc(" +
-					$.rnd(0.012, 0.437, 3) +
-					"vw + 5px);animation-delay: " +
-					$.rnd(25, 45, 0) / 10 +
-					's;"></span>'
+				$.rnd(1, 2, 0) +
+				'" style="top:' +
+				$.rnd(10, 40, 0) +
+				"%; left:" +
+				$.rnd(0, 100, 0) +
+				"%;width: calc(" +
+				$.rnd(0.025, 0.875, 3) +
+				"vw + 8px) ; height: calc(" +
+				$.rnd(0.012, 0.437, 3) +
+				"vw + 5px);animation-delay: " +
+				$.rnd(25, 45, 0) / 10 +
+				's;"></span>'
 			);
 		}
 	});
@@ -215,4 +215,31 @@ $(function () {
 	// 	},
 	// 	Modernizr.passiveeventlisteners ? { passive: true } : false
 	// );
+});
+
+$(document).ready(function() {
+    // 1. Iniciar escritura
+    setTimeout(function() {
+        $('.typewriter-text').addClass('start-typing');
+    }, 3500);
+
+    // 2. Intentar detectar scroll en el contenedor interno
+    // Probamos con la clase .scroll que es la que tiene tu HTML
+    $('.scroll').on('scroll', function() {
+        var top = $(this).scrollTop();
+        console.log("Scroll detectado en .scroll: " + top); // Esto te dirá en la consola si funciona
+        
+        if (top > 10) {
+            $('.typewriter-text').addClass('nombre-dorado');
+        } else {
+            $('.typewriter-text').removeClass('nombre-dorado');
+        }
+    });
+
+    // Por si acaso el scroll fuera en el body (depende del dispositivo)
+    $(window).on('scroll', function() {
+        if ($(this).scrollTop() > 10) {
+            $('.typewriter-text').addClass('nombre-dorado');
+        }
+    });
 });
